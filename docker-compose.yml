@@ -1,0 +1,18 @@
+version: '3'
+services:
+  flask-server:
+    build:
+      context: ./Docker_TF_Project
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+
+  
+  vue-app:
+    build: 
+      context: ./tf_front
+      dockerfile: Dockerfile
+
+    ports:
+      - "8000:8000"
